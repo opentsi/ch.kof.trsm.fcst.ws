@@ -8,52 +8,117 @@
 
 # Dataset identity (required)
 # These form the first three segments of every key
-country: ""   # ISO 3166-1 alpha-2 code (e.g., "ch", "de", "us")
-provider: ""  # short identifier (e.g., "adecco", "seco")
-dataset: ""   # short identifier (e.g., "sjmi", "gdp")
+country: "ch"   # ISO 3166-1 alpha-2 code (e.g., "ch", "de", "us")
+provider: "kof"  # short identifier (e.g., "adecco", "seco")
+dataset: "trsm_fcst_ws"   # short identifier (e.g., "sjmi", "gdp")
 
 # Dataset title (required)
 # At minimum, provide English. Add other languages as needed.
 title:
-  en: ""
-  # de: ""
-  # fr: ""
+  en: "KOF Forecasts of Winter Season Tourism in Switzerland"
+  de: "KOF Winterprognosen für den Schweizer Tourismus"
 
 # Data source name (required)
 source_name:
-  en: ""
-  # de: ""
+  en: "KOF Swiss Economic Institute"
+  de: "KOF Konjunkturforschungsstelle"
 
 # URL to original data source (required)
-source_url: "https://"
+source_url: "https://kof.ethz.ch/en/forecasts-and-indicators/forecasts/kof-forecasts-of-tourism-in-switzerland.html"
 
 # Data frequency (required)
 # D = daily, W = weekly, M = monthly, Q = quarterly, Y = yearly, I = irregular
-dataset_frequency: "M"
+dataset_frequency: "Y"
 
 # Units of measurement
 # Use "all" if uniform across variables, or specify per variable key
 units:
   all:
-    en: ""
+    en: "Overnight stays (in thousands)"
+    de: "Logiernächte (in Tausend)"
 
 # Aggregation method for temporal aggregation
 # Valid values: mean, sum, last, first
 aggregate:
-  all: "mean"
+  all: "sum"
 
 # Dimension order (left to right in the key, after country.provider.dataset)
-dim_order: []
+# Note: full keys carry fixed segments l (level) and lg (Logiernächte) as
+# variable and unit identifiers; the varying dimensions are origin and region.
+dim_order:
+  - origin
+  - region
 
 # Hierarchical structure of dimensions
-# Nest dimensions according to your key structure
-hierarchy: {}
+hierarchy:
+  origin:
+    all: ~
+    che: ~
+    for: ~
+    deu: ~
+    fra: ~
+    ita: ~
+    usa: ~
+    chn: ~
+    rest: ~
+  region:
+    ch: ~
+    alpin: ~
+    city: ~
+    rest: ~
 
 # Human-readable labels for dimensions and their values
 # dimnames: labels for dimension names
 # <dimension_name>: labels for values within that dimension
 labels:
-  dimnames: {}
+  dimnames:
+    origin:
+      en: "Origin of visitors"
+      de: "Herkunft der Gäste"
+    region:
+      en: "Region"
+      de: "Region"
+  origin:
+    all:
+      en: "All visitors"
+      de: "Alle Gäste"
+    che:
+      en: "Switzerland (domestic)"
+      de: "Schweiz (Inland)"
+    for:
+      en: "All foreign visitors"
+      de: "Alle ausländischen Gäste"
+    deu:
+      en: "Germany"
+      de: "Deutschland"
+    fra:
+      en: "France"
+      de: "Frankreich"
+    ita:
+      en: "Italy"
+      de: "Italien"
+    usa:
+      en: "USA"
+      de: "USA"
+    chn:
+      en: "China"
+      de: "China"
+    rest:
+      en: "Rest of the world"
+      de: "Übrige Welt"
+  region:
+    ch:
+      en: "Switzerland (total)"
+      de: "Schweiz (Total)"
+    alpin:
+      en: "Alpine region"
+      de: "Alpenregion"
+    city:
+      en: "Cities and lake destinations"
+      de: "Städte und Seen"
+    rest:
+      en: "Rest of Switzerland"
+      de: "Übriges Mittelland"
 
 
 # update checksum is empty in the beginning

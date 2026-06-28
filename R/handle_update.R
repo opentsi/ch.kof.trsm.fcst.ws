@@ -40,7 +40,7 @@ handle_update <- function(key = key) {
 generate_checksum_input <- function(key = key){
   # need to include user via session
   set_config(api_key = key)
-  sample_key <- "one.key.in.dataset"
+  sample_key <- "ch.kof.trsm.fcst.ws.l.all.alpin.lg"
   ts <- read_ts(ts_keys = sample_key)
   return(ts)
 }

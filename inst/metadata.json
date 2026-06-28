@@ -1,0 +1,116 @@
+{
+  "country": "ch",
+  "provider": "kof",
+  "dataset": "trsm_fcst_ws",
+  "title": {
+    "en": "KOF Forecasts of Winter Season Tourism in Switzerland",
+    "de": "KOF Winterprognosen für den Schweizer Tourismus"
+  },
+  "source_name": {
+    "en": "KOF Swiss Economic Institute",
+    "de": "KOF Konjunkturforschungsstelle"
+  },
+  "source_url": "https://kof.ethz.ch/en/forecasts-and-indicators/forecasts/kof-forecasts-of-tourism-in-switzerland.html",
+  "dataset_frequency": "Y",
+  "units": {
+    "all": {
+      "en": "Overnight stays (in thousands)",
+      "de": "Logiernächte (in Tausend)"
+    }
+  },
+  "aggregate": {
+    "all": "sum"
+  },
+  "dim_order": [
+    "origin",
+    "region"
+  ],
+  "hierarchy": {
+    "origin": {
+      "all": {},
+      "che": {},
+      "for": {},
+      "deu": {},
+      "fra": {},
+      "ita": {},
+      "usa": {},
+      "chn": {},
+      "rest": {}
+    },
+    "region": {
+      "ch": {},
+      "alpin": {},
+      "city": {},
+      "rest": {}
+    }
+  },
+  "labels": {
+    "dimnames": {
+      "origin": {
+        "en": "Origin of visitors",
+        "de": "Herkunft der Gäste"
+      },
+      "region": {
+        "en": "Region",
+        "de": "Region"
+      }
+    },
+    "origin": {
+      "all": {
+        "en": "All visitors",
+        "de": "Alle Gäste"
+      },
+      "che": {
+        "en": "Switzerland (domestic)",
+        "de": "Schweiz (Inland)"
+      },
+      "for": {
+        "en": "All foreign visitors",
+        "de": "Alle ausländischen Gäste"
+      },
+      "deu": {
+        "en": "Germany",
+        "de": "Deutschland"
+      },
+      "fra": {
+        "en": "France",
+        "de": "Frankreich"
+      },
+      "ita": {
+        "en": "Italy",
+        "de": "Italien"
+      },
+      "usa": {
+        "en": "USA",
+        "de": "USA"
+      },
+      "chn": {
+        "en": "China",
+        "de": "China"
+      },
+      "rest": {
+        "en": "Rest of the world",
+        "de": "Übrige Welt"
+      }
+    },
+    "region": {
+      "ch": {
+        "en": "Switzerland (total)",
+        "de": "Schweiz (Total)"
+      },
+      "alpin": {
+        "en": "Alpine region",
+        "de": "Alpenregion"
+      },
+      "city": {
+        "en": "Cities and lake destinations",
+        "de": "Städte und Seen"
+      },
+      "rest": {
+        "en": "Rest of Switzerland",
+        "de": "Übriges Mittelland"
+      }
+    }
+  },
+  "update_checksum": "aeb05c9087962c9815a5af59b0f8741a37b1165f1c5fcb3b33ac969d483f96ba"
+}
